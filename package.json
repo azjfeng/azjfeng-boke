@@ -1,0 +1,60 @@
+{
+  "name": "reactmusic",
+  "version": "1.0.0",
+  "description": "react音乐播放器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js",
+    "serve": "webpack serve",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azjfeng/reactMusic.git"
+  },
+  "author": "azjfeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azjfeng/reactMusic/issues"
+  },
+  "homepage": "https://github.com/azjfeng/reactMusic#readme",
+  "dependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "awesome-typescript-loader": "^5.2.1",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.6",
+    "file-loader": "^6.2.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^7.0.1",
+    "less": "^4.1.1",
+    "less-loader": "^9.0.0",
+    "mysql": "^2.18.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.1.0",
+    "request": "^2.88.2",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^9.2.3",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "html-webpack-plugin": "^5.3.1",
+    "typescript": "^4.3.4",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
