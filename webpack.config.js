@@ -48,7 +48,7 @@ module.exports = {
   // },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "音乐播放器",
+      title: "azjfeng-boke",
       filename: "index.html",
       template: "./template/template.html",
     }),
