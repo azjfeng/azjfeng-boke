@@ -1,6 +1,22 @@
 import React from 'react';
-// import '../../style/edit/edit.less'
-class Edit extends React.Component {
+interface IState {
+    title: string,
+    auther: string,
+    desc: string
+}
+interface IProps {
+    match ?: string,
+    auther ?: string,
+    desc ?: string
+}
+
+interface parmas extends IState {
+    content: string;
+}
+
+const win: any = window;
+
+class Edit extends React.Component<IProps, IState> {
     constructor(props) {
         super(props)
         this.saveData = this.saveData.bind(this);
@@ -16,36 +32,36 @@ class Edit extends React.Component {
     componentDidMount() {
         console.log(this.props.match)
         const height = document.documentElement.offsetHeight;
-        const E = window.wangEditor;
+        const E = win.wangEditor;
         const editor = new E(".edit1");
         editor.config.height = (height / 2);
 
         // 或者 const editor = new E(document.getElementById('div1'))
         editor.create();
-        window.editorEle = editor;
+        win.editorEle = editor;
     }
     saveData() {
         console.log(this.state);
-        $('.saveEdit').html(editorEle.txt.html());
+        $('.saveEdit').html(win.editorEle.txt.html());
 
-        this.addTechnologyShare({
-            title:this.state.title,
-            auther:this.state.auther,
-            desc:this.state.desc,
-            content:editorEle.txt.html()
-        });
+        // this.addTechnologyShare({
+        //     title:this.state.title,
+        //     auther:this.state.auther,
+        //     desc:this.state.desc,
+        //     content:win.editorEle.txt.html()
+        // });
     }
-    autherChange(e){
+    autherChange(e): void{
         this.setState({
             auther:e.target.value
         })
     }
-    titleChange(e){
+    titleChange(e): void{
         this.setState({
             title:e.target.value
         })
     }
-    descChange(e){
+    descChange(e): void{
         this.setState({
             desc:e.target.value
         })
@@ -53,7 +69,7 @@ class Edit extends React.Component {
     /**
      * 添加分享数据
      */
-    addTechnologyShare(params) {
+    addTechnologyShare(params: parmas) : void{
         fetch('/addTechnologyShare', {
             method: "post",
             body: JSON.stringify(params) // must match 'Content-Type' header

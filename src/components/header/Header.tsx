@@ -1,6 +1,6 @@
 import React from 'react'
 // import '../../style/header/header.less'
-// import Home from '../home/Home.tsx';
+import Home from '../home/Home';
 // import Detail from '../detail/Detail.tsx'
 import {
     HashRouter as Router,
@@ -8,6 +8,13 @@ import {
     Route,
     Link
 } from "react-router-dom";
+interface IState{
+    navList: Array<any>,
+    hashName: string
+}
+interface IProps{
+
+}
 class Header extends React.Component<IProps, IState>{
     constructor(props) {
         super(props)
@@ -53,10 +60,10 @@ class Header extends React.Component<IProps, IState>{
                         </div>
                     </div>
                 </div>
-                {/* <Switch>
+                <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/detail/:title" component={Detail} />
-                </Switch> */}
+                    {/* <Route exact path="/detail/:title" component={Detail} /> */}
+                </Switch>
             </Router>
         )
     }
