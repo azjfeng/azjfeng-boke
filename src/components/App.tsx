@@ -1,7 +1,23 @@
 import React  from "react";
 import "../styles/index.css";
+import "../styles/tailwind.css";
+
+
+interface ItemPropsValue {
+    title: string;
+}
+const Item = (props: ItemPropsValue)=>{
+    return <span className="text-gray-100">{props.title}</span>
+}
 function App(){
-    return <h1  className="bg-white dark:bg-gray-800 text-purple-600">Hello, World</h1>
+    const arr: any[] = [1,2,3,4,5]
+    return <div  className="h-16 bg-gray-500 flex flex-row">
+        {
+            arr.map((item)=>{
+                return <Item title={item}/>
+            })
+        }
+    </div>
 }
 
 export default App
