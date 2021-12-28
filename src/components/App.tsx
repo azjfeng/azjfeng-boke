@@ -7,7 +7,7 @@ interface ItemPropsValue {
     title: string;
 }
 const Item = (props: ItemPropsValue)=>{
-    return <span className="text-gray-100">{props.title}</span>
+    return <span className="text-gray-100 iconfont icon-browse">{props.title}</span>
 }
 function App(){
     const arr: any[] = [1,2,3,4,5]
@@ -17,6 +17,7 @@ function App(){
                 return <Item title={item}/>
             })
         }
+        <span className="text-gray-100  iconfont icon-favorite"></span>
     </div>
 }
 
