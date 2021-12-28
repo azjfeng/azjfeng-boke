@@ -20,10 +20,10 @@ class Home extends React.Component<IProps, IState>{
         { id: 'js实现中文排序、分类。', value: 'http://www.azjfeng.com/static/Capture001.png' },
       ],
       concatList: [
-        { id: 1, value: '../../assets/icon/Email.png' },
-        { id: 2, value: '../../assets/icon/home.png' },
-        { id: 3, value: '../../assets/icon/qq.png' },
-        { id: 4, value: '../../assets/icon/weixin.png' }
+        { id: 1, value: 'http://www.azjfeng.com/static/Email.png' },
+        { id: 2, value: 'http://www.azjfeng.com/static/home.png' },
+        { id: 3, value: 'http://www.azjfeng.com/static/qq.png' },
+        { id: 4, value: 'http://www.azjfeng.com/static/weixin.png' }
       ],
       contentList: [
 
@@ -107,7 +107,7 @@ class Home extends React.Component<IProps, IState>{
             <div className="concat_deatil">
               {
                 concatList.map((item) => {
-                  return <span className="iconfont icon-navigation"></span>
+                  return <img src={item.value}></img>
                 })
               }
             </div>
