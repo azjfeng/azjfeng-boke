@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/index.less";
-import "../styles/tailwind.css";
+// import "../styles/tailwind.css";
 import Header from './header/Header';
+import Edit from './edit/Edit'
 import {
     HashRouter as Router,
     Switch,
@@ -17,13 +18,13 @@ const Item = (props: ItemPropsValue) => {
 }
 function App() {
     const arr: any[] = [1, 2, 3, 4, 5]
-    return <div className="h-16">
+    return <div className="app">
         <Router>
             <Route path="/" component={Header} >
             </Route>
-            {/* <Route exact path="/edit" component={Edit} >
+            <Route exact path="/edit" component={Edit} >
             </Route>
-            <Route exact path="/nav" component={Nav} >
+            {/* <Route exact path="/nav" component={Nav} >
             </Route>
             <Route exact path="/reedit/:title" component={ReEdit} >
             </Route> */}

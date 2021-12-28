@@ -1,9 +1,11 @@
-@tailwind base;
+// @tailwind base;
 
-@tailwind components;
+// @tailwind components;
 
-@tailwind utilities;
+// @tailwind utilities;
 
+@import url('./md.less');
+@import url('./reset.less');
 @font-face {
   font-family: "iconfont"; /* Project id  */
   src: url("iconfont.ttf?t=1640656520453") format("truetype");
@@ -52,7 +54,6 @@
 .icon-upload:before {
   content: "\e683";
 }
-
 .header{
     height: 60px;
     line-height: 60px;
@@ -119,4 +120,76 @@
         height: 100%;
         background-size: 100% 100%;
     }
+}
+
+.edit{
+  width: 100%;
+  height: atuo;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  .content{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      .edit1{
+          width: 50%;
+          min-height: 640.5px;
+      }
+      .saveEdit{
+          width: 50%;
+          background: #fff;
+      }
+  }
+  
+}
+
+.form{
+  width: 100%;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  background-color: #fff;
+  .edit_label{
+      display: flex;
+      width: 50%;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      // padding-left: 20px;
+      margin-top: 20px;
+      box-sizing: border-box;
+      .edit_input{
+          border: 1px solid gray;
+          flex: 1;
+          margin-left: 10px;
+          border-radius: 2px;
+          height: 30px;
+          padding: 4px 12px;
+      }
+  }
+}
+
+.btn_list{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background: #fff;
+  border-top: 1px solid #eee;
+  button{
+      width: 100px;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+  }
+  .cancel{
+      background: #dfe2e5;
+      color: #fff;
+  }
+  .submit{
+      background: rgb(0, 174, 255);
+      color: #fff;
+  }
 }
