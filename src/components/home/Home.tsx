@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../styles/home/home.less'
-
+const win: any = window
 import {
   Link
 } from "react-router-dom";
@@ -31,7 +31,8 @@ class Home extends React.Component<IProps, IState>{
     }
   }
   componentDidMount() {
-    var mySwiper = new Swiper('.swiper-container', {
+    const Swiper = win.Swiper
+    var mySwiper = new Swiper('.swiper', {
       loop: true, // 循环模式选项
       autoplay: true,
       // 如果需要分页器
@@ -73,7 +74,7 @@ class Home extends React.Component<IProps, IState>{
       <div className="home">
         <div className="home_top">
           <div className="home_top_swiper">
-            <div className="swiper-container">
+            <div className="swiper">
               <div className="swiper-wrapper">
                 {
                   swiper.map((item) => {
