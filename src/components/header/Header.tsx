@@ -1,7 +1,7 @@
 import React from 'react'
 // import '../../style/header/header.less'
 import Home from '../home/Home';
-// import Detail from '../detail/Detail.tsx'
+import Detail from '../detail/Detail'
 import {
     HashRouter as Router,
     Switch,
@@ -62,7 +62,7 @@ class Header extends React.Component<IProps, IState>{
                 </div>
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    {/* <Route exact path="/detail/:title" component={Detail} /> */}
+                    <Route exact path="/detail/:title" component={Detail} />
                 </Switch>
             </Router>
         )
