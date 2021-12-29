@@ -1,4 +1,5 @@
 import React from 'react';
+
 interface IState {
     title: string,
     auther: string,
@@ -30,6 +31,8 @@ class Edit extends React.Component<IProps, IState> {
         }
     }
     componentDidMount() {
+        console.log(win.$);
+
         console.log(this.props.match)
         const height = document.documentElement.offsetHeight;
         const E = win.wangEditor;
@@ -41,7 +44,6 @@ class Edit extends React.Component<IProps, IState> {
         win.editorEle = editor;
     }
     saveData() {
-        console.log(this.state);
         $('.saveEdit').html(win.editorEle.txt.html());
 
         // this.addTechnologyShare({
