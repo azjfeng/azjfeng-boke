@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../styles/edit/edit.less'
 interface IState {
     title: string,
     auther: string,
