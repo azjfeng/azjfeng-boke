@@ -3,6 +3,7 @@ import "../styles/index.less";
 // import "../styles/tailwind.css";
 import Header from './header/Header';
 import Edit from './edit/Edit'
+import ReEdit from "./reedit/ReEdit";
 import {
     HashRouter as Router,
     Switch,
@@ -25,9 +26,9 @@ function App() {
             <Route exact path="/edit" component={Edit} >
             </Route>
             {/* <Route exact path="/nav" component={Nav} >
-            </Route>
-            <Route exact path="/reedit/:title" component={ReEdit} >
             </Route> */}
+            <Route exact path="/reedit/:title" component={ReEdit} >
+            </Route>
         </Router>
     </div>
 }
