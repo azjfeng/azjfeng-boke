@@ -34,7 +34,7 @@ class Home extends React.Component<IProps, IState>{
         { id: 3, value: 'http://www.azjfeng.com/static/qq.png' },
         { id: 4, value: 'http://www.azjfeng.com/static/weixin.png' }
       ],
-      contentList: [],
+      contentList: [{"id":3,"auther":"jameinfeng","title":"几个优雅的JavaScript运算符使用技巧","content":"","create_time":"2021-07-23T16:00:00.000Z","support":1,"watch_num":1,"contentdesc":"ECMAScript发展进程中，会有很多功能的更新，比如销毁，箭头功能，模块，它们极大的改变JavaScript编写方式，可能有些人喜欢，有些人不喜欢，但像每个新功能一样，我们最终会习惯它们。新版本的ECMAScript引入了三个新的逻辑赋值运算符：空运算符，AND和OR运算符，这些运算符的出现，也是希望让我们的代码更干净简洁，下面分享几个优雅的JavaScript运算符使用技巧","image":"../../assets/img/2019-9-6.jpg"},{"id":5,"auther":"jameinfeng","title":"webpack插件开发","content":"","create_time":"2021-07-28T16:00:00.000Z","support":1,"watch_num":1,"contentdesc":"webpack篇-插件plugin开发，基础插件","image":"../../assets/img/2019-9-6.jpg"},{"id":6,"auther":"jameinfeng","title":"go语言学习-1","content":"","create_time":"2021-07-28T16:00:00.000Z","support":1,"watch_num":1,"contentdesc":"go语言入门第一课","image":"../../assets/img/2019-9-6.jpg"},{"id":7,"auther":"jameinfeng","title":"react组件通信","content":"","create_time":"2021-07-29T16:00:00.000Z","support":1,"watch_num":1,"contentdesc":"在使用 React 的过程中，不可避免的需要组件间进行消息传递（通信）","image":"../../assets/img/2019-9-6.jpg"}],
     }
   }
   componentDidMount() {
