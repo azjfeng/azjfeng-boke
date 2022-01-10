@@ -23,7 +23,7 @@ class Todo extends React.Component<IProps, IState>{
   }
   searchDetail(params) {
     const that = this;
-    fetch('/getDetail', {
+    fetch('https://www.azjfeng.com/common/getDetail', {
       method: "post",
       body: JSON.stringify(params) // must match 'Content-Type' header
     })
@@ -31,11 +31,12 @@ class Todo extends React.Component<IProps, IState>{
         return response.json();
       })
       .then(function (myJson) {
+        console.log(myJson)
         that.setState({
-          detail: myJson.data.result[0]
+          detail: myJson.result[0]
         })
         $('.detail').append(myJson.content);
-        console.log(myJson.data.result);
+        console.log(myJson.result);
       });
   }
   render() {
