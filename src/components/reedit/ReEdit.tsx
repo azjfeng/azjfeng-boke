@@ -74,7 +74,7 @@ class ReEdit extends React.Component<IProps, IState> {
      * 添加分享数据
      */
     updateTechnologyShare(params) {
-        fetch('/updateTechnologyShare', {
+        fetch('https://www.azjfeng.com/common/updateTechnologyShare', {
             method: "post",
             body: JSON.stringify(params) // must match 'Content-Type' header
         })

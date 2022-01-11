@@ -46,12 +46,12 @@ class Edit extends React.Component<IProps, IState> {
     saveData() {
         $('.saveEdit').html(win.editorEle.txt.html());
 
-        // this.addTechnologyShare({
-        //     title:this.state.title,
-        //     auther:this.state.auther,
-        //     desc:this.state.desc,
-        //     content:win.editorEle.txt.html()
-        // });
+         this.addTechnologyShare({
+             title:this.state.title,
+             auther:this.state.auther,
+             desc:this.state.desc,
+             content:win.editorEle.txt.html()
+         });
     }
     autherChange(e): void{
         this.setState({
@@ -72,7 +72,7 @@ class Edit extends React.Component<IProps, IState> {
      * 添加分享数据
      */
     addTechnologyShare(params: parmas) : void{
-        fetch('/addTechnologyShare', {
+        fetch('https://www.azjfeng.com/common/addTechnologyShare', {
             method: "post",
             body: JSON.stringify(params) // must match 'Content-Type' header
         })
