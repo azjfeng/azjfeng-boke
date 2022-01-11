@@ -88,7 +88,7 @@ class ReEdit extends React.Component<IProps, IState> {
     }
     getData(params) {
         const that = this;
-        fetch('/getDetail', {
+        fetch('https://www.azjfeng.com/common/getDetail', {
             method: "post",
             body: JSON.stringify(params) // must match 'Content-Type' header
         })
@@ -97,14 +97,14 @@ class ReEdit extends React.Component<IProps, IState> {
             })
             .then(function (myJson) {
                 that.setState({
-                    detail: myJson.data.result[0],
-                    title: myJson.data.result[0].title,
-                    auther: myJson.data.result[0].auther,
-                    desc: myJson.data.result[0].contentdesc,
-                    id: myJson.data.result[0].id
+                    detail: myJson.result[0],
+                    title: myJson.result[0].title,
+                    auther: myJson.result[0].auther,
+                    desc: myJson.result[0].contentdesc,
+                    id: myJson.result[0].id
                 })
                 win.editorEle.txt.html(myJson.content) // 重新设置编辑器内容
-                console.log(myJson.data.result);
+                console.log(myJson.result);
             }).catch((err) => {
                 console.log(err)
             });
