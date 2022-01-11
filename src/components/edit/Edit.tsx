@@ -72,7 +72,7 @@ class Edit extends React.Component<IProps, IState> {
      * 添加分享数据
      */
     addTechnologyShare(params: parmas) : void{
-        fetch('/addTechnologyShare', {
+        fetch('https://www.azjfeng.com/common/addTechnologyShare', {
             method: "post",
             body: JSON.stringify(params) // must match 'Content-Type' header
         })
