@@ -19,6 +19,7 @@ const Item = (props: ItemPropsValue) => {
 }
 function App() {
     const arr: any[] = [1, 2, 3, 4, 5]
+
     return <div className="app">
         <Router>
             <Route path="/" component={Header} >
@@ -30,6 +31,7 @@ function App() {
             <Route exact path="/reedit/:title" component={ReEdit} >
             </Route>
         </Router>
+        <a className="copyright" href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021175619号</a>
     </div>
 }
 
