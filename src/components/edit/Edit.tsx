@@ -44,14 +44,19 @@ class Edit extends React.Component<IProps, IState> {
         win.editorEle = editor;
     }
     saveData() {
+        const { title, auther, desc } = this.state
         $('.saveEdit').html(win.editorEle.txt.html());
+        if(title && auther && desc && win.editorEle.txt.html()){
+            this.addTechnologyShare({
+                title:this.state.title,
+                auther:this.state.auther,
+                desc:this.state.desc,
+                content:win.editorEle.txt.html()
+            });
+        }else{
+            return
+        }
 
-         this.addTechnologyShare({
-             title:this.state.title,
-             auther:this.state.auther,
-             desc:this.state.desc,
-             content:win.editorEle.txt.html()
-         });
     }
     autherChange(e): void{
         this.setState({

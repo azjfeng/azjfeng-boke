@@ -138,12 +138,15 @@
 }
 
 .edit{
-  width: 100%;
+  width: 50%;
   height: atuo;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 20px 20px;
   margin-top: 60px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
   .content{
       width: 100%;
       display: flex;
@@ -154,17 +157,17 @@
       .saveEdit{
           width: 50%;
           background: #fff;
-          border: 1px solid #666;
+          border: 2px solid #EEE;
       }
   }
 }
 
 .form{
-  width: 100%;
   display: flex;
   height: auto;
   flex-direction: column;
   background-color: #fff;
+  padding: 0 20px;
   .edit_label{
       display: flex;
       width: 50%;
@@ -191,6 +194,7 @@
   justify-content: flex-end;
   background: #fff;
   border-top: 1px solid #eee;
+  box-sizing: border-box;
   button{
       width: 100px;
       height: 40px;
